@@ -13,10 +13,10 @@ namespace MVC_DataExploration.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class MyDBContext : DbContext
+    public partial class grocertogoEntities1 : DbContext
     {
-        public MyDBContext()
-            : base("name=MyDBContext")
+        public grocertogoEntities1()
+            : base("name=grocertogoEntities1")
         {
         }
     
@@ -25,5 +25,8 @@ namespace MVC_DataExploration.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Category> Categories { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<ProductDetail> ProductDetails { get; set; }
     }
 }

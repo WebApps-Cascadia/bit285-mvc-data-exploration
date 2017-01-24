@@ -7,14 +7,3 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-
-public partial class Product
-{
-    public int ProductId { get; set; }
-    public Nullable<int> Category { get; set; }
-    public string ProductName { get; set; }
-    public string ProductDescription { get; set; }
-    public Nullable<decimal> UnitPrice { get; set; }
-}

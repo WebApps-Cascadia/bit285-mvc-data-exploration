@@ -7,21 +7,24 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System;
-using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
-
-public partial class MyDBContext : DbContext
+namespace MVC_DataExploration.Models
 {
-    public MyDBContext()
-        : base("name=MyDBContext")
+    using System;
+    using System.Data.Entity;
+    using System.Data.Entity.Infrastructure;
+    
+    public partial class MyDBContext : DbContext
     {
+        public MyDBContext()
+            : base("name=MyDBContext")
+        {
+        }
+    
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            throw new UnintentionalCodeFirstException();
+        }
+    
+        public virtual DbSet<Product> Products { get; set; }
     }
-
-    protected override void OnModelCreating(DbModelBuilder modelBuilder)
-    {
-        throw new UnintentionalCodeFirstException();
-    }
-
-    public virtual DbSet<Product> Products { get; set; }
 }

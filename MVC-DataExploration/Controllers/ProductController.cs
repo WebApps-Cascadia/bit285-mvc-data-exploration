@@ -30,7 +30,7 @@ namespace MVC_DataExploration.Controllers
             db.Products.Add(myProduct);
 
             db.SaveChanges();
-            return View("Index", db.Products);
+             return View("Index", db.Products);
         }
     }
 }

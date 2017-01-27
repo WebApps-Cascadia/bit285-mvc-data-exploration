@@ -7,3 +7,50 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System;
+using System.Collections.Generic;
+
+public partial class Category
+{
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+    public Category()
+    {
+        this.Products = new HashSet<Product>();
+    }
+
+    public int CategoryId { get; set; }
+    public string CategoryName { get; set; }
+
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+    public virtual ICollection<Product> Products { get; set; }
+}
+
+public partial class Product
+{
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+    public Product()
+    {
+        this.ProductDetails = new HashSet<ProductDetail>();
+    }
+
+    public int ProductId { get; set; }
+    public Nullable<int> Category { get; set; }
+    public string ProductName { get; set; }
+    public string ProductDescription { get; set; }
+    public Nullable<decimal> UnitPrice { get; set; }
+
+    public virtual Category Category1 { get; set; }
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+    public virtual ICollection<ProductDetail> ProductDetails { get; set; }
+}
+
+public partial class ProductDetail
+{
+    public int Id { get; set; }
+    public int ProductID { get; set; }
+    public string Name { get; set; }
+    public string Grams { get; set; }
+    public Nullable<int> Percent { get; set; }
+
+    public virtual Product Product { get; set; }
+}

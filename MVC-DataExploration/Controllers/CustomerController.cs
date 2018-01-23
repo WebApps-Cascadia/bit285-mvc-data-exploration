@@ -11,7 +11,20 @@ namespace MVC_DataExploration.Controllers
     {
         private MyDbContext db = new MyDbContext();
 
-        // GET: Customer
+        [HttpPost]
+        public ActionResult create(Customer customer)
+        {
+            db.Customers.Add(customer);
+            db.SaveChanges();
+            return View("Index", db.Customers);
+        }
+
+        [HttpGet]
+        public ActionResult create()
+        {
+            return View();
+        }
+
         public ActionResult Index()
         {
             return View(db.Customers);

@@ -6,7 +6,8 @@ using System.Web.Mvc;
 
 namespace MVC_DataExploration.Controllers
 {
-    public class HomeController : Controller
+
+      public class HomeController : Controller
     {
         public ActionResult Index()
         {

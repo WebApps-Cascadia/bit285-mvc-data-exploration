@@ -3,15 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MVC_DataExploration.Models;
 
 namespace MVC_DataExploration.Controllers
 {
     public class ProductController : Controller
     {
-        // GET: Product
+        MyDBContext DB = new MyDBContext();// GET: Product
+
         public ActionResult Index()
         {
-            return View();
+            return View(DB.Products);
         }
     }
 }

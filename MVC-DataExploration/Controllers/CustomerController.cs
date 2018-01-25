@@ -14,7 +14,28 @@ namespace MVC_DataExploration.Controllers
         // GET: Customer
         public ActionResult Index()
         {
-            return View(db.Customers);
+            return View();
+        }
+        // GET: 
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+      public  ActionResult Create(Customer customer)
+        {
+           try
+            {
+                db.Customers.Add(customer);
+                db.SaveChanges();
+                return RedirectToAction("Index", db.Customers);
+           }
+           catch
+           {
+               return View();
+           }
+          
         }
     }
 }

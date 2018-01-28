@@ -5,6 +5,7 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="523170eafd4444729fd4b079a4d663a4" Name="Diagram1">
+        <EntityTypeShape EntityType="grocertogoModel.Product" Width="2.5" PointX="1.125" PointY="1" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

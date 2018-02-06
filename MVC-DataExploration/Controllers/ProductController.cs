@@ -8,7 +8,9 @@ namespace MVC_DataExploration.Controllers
 {
     public class ProductController : Controller
     {
-        
+        MyDbContext 
+
+
         // GET: Product
         public ActionResult Index()
         {

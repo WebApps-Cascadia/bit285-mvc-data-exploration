@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
-
+//Revision
 namespace MVC_DataExploration.Models
 {
     public class Customer

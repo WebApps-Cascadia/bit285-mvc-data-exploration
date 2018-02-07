@@ -154,6 +154,9 @@
     <Compile Include="Models\Product.cs">
       <DependentUpon>GrocerToGo.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ProductDetail.cs">
+      <DependentUpon>GrocerToGo.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
